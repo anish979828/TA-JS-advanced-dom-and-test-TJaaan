@@ -1,3 +1,5 @@
+
+// data 
 let quotes = [
   {
     quoteText:
@@ -2899,15 +2901,41 @@ let quotes = [
 
 let ul = document.querySelector(".quotes");
 
+let max = 3;
+let index = 0;
+
+
+//  function for UI 
 
 function createUI(){
-  quotes.forEach(quotes => {
+  for(let i = 0; i < max; i++){
     let li = document.createElement("li");
-    li.innerText = quotes.quoteText;
-    let p = document.createElement("p");
-    p.innerText = quotes.quoteAuthor;
-    ul.append(li,p);
-  })
+    let quote = document.createElement("blockquote");
+    let author = document.createElement("cite");
+  
+    quote.innerText = quotes[index].quoteText;
+    author.innerText = quotes[index].quoteAuthor;
+    li.append(quote,author);
+  
+    ul.append(li);
+    index++;
+
+  }
+
+
+
 };
 
 createUI();
+
+// scroll function 
+
+document.addEventListener("scroll" , () => {
+  let scrollTop = document.documentElement.scrollTop;
+  let clientHeight = document.documentElement.clientHeight;
+  let scrollHeight = document.documentElement.scrollHeight;
+  console.log(scrollHeight)
+  if(scrollTop + clientHeight >= scrollHeight && index < quotes.length){
+    createUI();
+  }
+})
