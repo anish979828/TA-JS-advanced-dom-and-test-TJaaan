@@ -2896,3 +2896,18 @@ let quotes = [
     quoteAuthor: 'Byron Pulsifer',
   },
 ];
+
+let ul = document.querySelector(".quotes");
+
+
+function createUI(){
+  quotes.forEach(quotes => {
+    let li = document.createElement("li");
+    li.innerText = quotes.quoteText;
+    let p = document.createElement("p");
+    p.innerText = quotes.quoteAuthor;
+    ul.append(li,p);
+  })
+};
+
+createUI();
