@@ -1,0 +1,23 @@
+{
+  "name": "ta-js-advanced-dom-and-test-tjaaan",
+  "version": "1.0.0",
+  "description": "TA-JS-advanced-dom-and-test-TJaaan",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/anish979828/TA-JS-advanced-dom-and-test-TJaaan.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/anish979828/TA-JS-advanced-dom-and-test-TJaaan/issues"
+  },
+  "homepage": "https://github.com/anish979828/TA-JS-advanced-dom-and-test-TJaaan#readme",
+  "devDependencies": {
+    "eslint": "^8.34.0"
+  }
+}
